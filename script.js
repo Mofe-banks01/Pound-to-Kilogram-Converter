@@ -26,7 +26,7 @@ function convertWeight() {
     result = uservalueInput * 100000;
   }
   console.log(uservalueInput);
-  console.log(result);
+ 
   if (uservalueInput !== 0)
     resultText.innerText = `Result : ${result} ${unit.value}`;
 }
