@@ -1,11 +1,11 @@
 // First we need to get the DOm elements of all input/options so taht we can implement them into our code
 // DOM Elements
 
+const userInput = document.getElementById("userinput");
+const unit = document.getElementById("unitSelect");
+const resultText = document.getElementById("result");
 // Function TO Convert Weight
 function convertWeight() {
-  const userInput = document.getElementById("userinput");
-  const unit = document.getElementById("unitSelect");
-  const resultText = document.getElementById("result");
   // Resultvalue
   let result = null;
   // Collecting Userinput
@@ -26,7 +26,7 @@ function convertWeight() {
     result = uservalueInput * 100000;
   }
   console.log(uservalueInput);
- 
+
   if (uservalueInput !== 0)
     resultText.innerText = `Result : ${result} ${unit.value}`;
 }

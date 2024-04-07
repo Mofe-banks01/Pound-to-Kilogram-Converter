@@ -1,9 +1,21 @@
 body {
-  background-image: url(background.png);
   background-repeat: no-repeat;
- 
+  background-color: #091919;
   background-size: cover;
+  position: relative;
 }
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -5rem;
+  left: -150px;
+  clip-path: circle(20% at 50% 50%);
+  /* border-radius: 50%; */
+  background: rgb(248, 33, 33);
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -19,10 +31,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.3rem;
-  padding: 1.1rem 1rem;
-  background-color: transparent;
+  padding: 1.1rem 4rem;
+  background-color: rgb(255, 255, 255, 0.5);
   margin-top: 9.7rem;
   border-radius: 7px;
+  backdrop-filter: blur(5px);
 }
 
 .box h1 {
@@ -49,13 +62,13 @@ body {
   font-size: medium;
 }
 #result {
- color: #fff;
+  color: #fff;
   font-size: 1.5rem;
 }
-input{
-  padding : 10px 15px
+input {
+  padding: 10px 15px;
 }
-select{
+select {
   padding: 5px 15px;
 }
 @media (max-width: 35em) {
