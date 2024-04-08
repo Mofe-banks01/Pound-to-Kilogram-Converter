@@ -7,13 +7,12 @@ const resultText = document.getElementById("result");
 // Function TO Convert Weight
 function convertWeight() {
   // Resultvalue
-  let result = null;
+  let result;
   // Collecting Userinput
   const uservalueInput = userInput.value;
   // Checking for input , and selected unit.
   if (!uservalueInput) {
     alert(`Please Input A Value`);
-    resultText.innerText = `You are yet to put in a value`;
   } else if (unit.value === "kg") {
     result = uservalueInput * 0.453592;
   } else if (unit.value === "lb") {
@@ -26,7 +25,9 @@ function convertWeight() {
     result = uservalueInput * 100000;
   }
   console.log(uservalueInput);
-
+  if (uservalueInput !== 0) {
+    document.querySelector(".name").classList.remove("hidden");
+  }
   if (uservalueInput !== 0)
     resultText.innerText = `Result : ${result} ${unit.value}`;
 }
