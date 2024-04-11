@@ -34,7 +34,7 @@ body::before {
   background-color: rgb(255, 255, 255, 0.5);
   margin-top: 9.7rem;
   border-radius: 7px;
-  backdrop-filter: blur(9px);
+  backdrop-filter: blur(18px);
 }
 
 .box h1 {
@@ -62,6 +62,9 @@ body::before {
 .submit-btn {
   padding: 5px 25px;
   font-size: medium;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
 }
 #result {
   color: #fff;

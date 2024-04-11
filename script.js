@@ -4,6 +4,7 @@
 const userInput = document.getElementById("userinput");
 const unit = document.getElementById("unitSelect");
 const resultText = document.getElementById("result");
+resultText.classList.add("hidden");
 // Function TO Convert Weight
 function convertWeight() {
   // Resultvalue
@@ -13,6 +14,7 @@ function convertWeight() {
   // Checking for input , and selected unit.
   if (!uservalueInput) {
     alert(`Please Input A Value`);
+    resultText.classList.add("hidden");
   } else if (unit.value === "kg") {
     result = uservalueInput * 0.453592;
   } else if (unit.value === "lb") {
@@ -28,6 +30,6 @@ function convertWeight() {
   if (uservalueInput !== 0) {
     document.querySelector(".name").classList.remove("hidden");
   }
-  if (uservalueInput !== 0)
-    resultText.innerText = `Result : ${result} ${unit.value}`;
+  if (uservalueInput !== 0) resultText.classList.remove("hidden");
+  resultText.innerText = `Result : ${result} ${unit.value}`;
 }
